@@ -29,7 +29,7 @@ function setting($k,$d=''){
 }
 function h($s){return htmlspecialchars((string)$s,ENT_QUOTES,'UTF-8');}
 function admin(){return !empty($_SESSION['admin']);}
-function require_admin(){if(!admin()){header('Location: admin/login.php');exit;}}
+function require_admin(){if(!admin()){header('Location: /admin/login.php');exit;}}
 function telegram_notify($text){
     $token=setting('telegram_bot_token','');
     $chat=setting('telegram_chat_id','');
