@@ -80,14 +80,7 @@ $maskedPrefixes=[
     '863729'
 ];
 
-$maskedPrefix=$maskedPrefixes[$seed % count($maskedPrefixes)];
-
-$maskedLast=substr(
-    str_pad((string)$seed,4,'0',STR_PAD_LEFT),
-    -4
-);
-
-$maskedWhatsapp=$maskedPrefix.$maskedLast;
+$maskedWhatsapp=$maskedPrefixes[$seed % count($maskedPrefixes)].'XXXX';
 ?>
 
 <!doctype html>
